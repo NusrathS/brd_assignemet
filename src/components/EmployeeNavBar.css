@@ -1,18 +1,18 @@
 /* Basic Navbar Styles */
 .employee-navbar {
     background-color: rgb(0, 0, 0); /* Black background */
-    border-radius: 8px;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center align the text in the navbar */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Padding around navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    text-align: center; /* Center-align text in navbar */
     position: relative;
 }
 
 .navbar-list {
-    list-style: none;
+    list-style: none; /* Remove bullets */
     display: flex;
-    justify-content: center; /* Center align the list items horizontally */
-    gap: 2em;
+    justify-content: center; /* Center-align list items horizontally */
+    gap: 2em; /* Spacing between items */
     padding: 0;
     margin: 0;
 }
@@ -25,38 +25,39 @@
 
 /* Submenu Styles */
 .submenu {
-    position: fixed; /* Fix it to the viewport */
+    position: fixed; /* Position submenu in viewport */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Shift it to the exact center */
+    transform: translate(-50%, -50%); /* Offset to center exactly */
     background-color: rgba(40, 40, 40, 0.95); /* Dark background with transparency */
     border-radius: 8px;
-    padding: 20px;
-    color: white; /* Set submenu text color to white */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensures it appears on top */
-    width: 300px; /* Set a width to make the submenu consistent */
+    padding: 20px; /* Padding around submenu */
+    color: white; /* White submenu text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    z-index: 1000; /* Appear on top */
+    width: 300px; /* Set fixed width */
 }
 
 .submenu ul, .nested-submenu ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullets */
     padding: 0;
     margin: 0;
 }
 
 .nested-submenu {
-    padding-left: 15px;
-    color: white;
+    padding-left: 15px; /* Indent nested items */
+    color: white; /* White text for nested submenu */
 }
 
 .nested-submenu li {
-    padding: 5px 0;
+    padding: 5px 0; /* Spacing between nested items */
 }
 
-/* Uncomment this for hover effect */
+/* Hover effect for list items */
 .navbar-list li:hover,
 .submenu ul li:hover,
 .nested-submenu li:hover {
     color: purple;
+    /* Uncomment below for underline on hover */
     /* text-decoration: underline; */
 }

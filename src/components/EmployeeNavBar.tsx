@@ -2,21 +2,25 @@ import React, { useState } from 'react';
 import './EmployeeNavBar.css';
 
 const EmployeeNavBar: React.FC = () => {
-  // State to control visibility of main menus and submenus
+  // State to control the active main menu selection
   const [activeMainMenu, setActiveMainMenu] = useState<string | null>(null);
+  // State to control the active submenu selection
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
 
+  // Toggle the visibility of a main menu and reset submenus when switching main menus
   const toggleMainMenu = (menu: string) => {
     setActiveMainMenu((prev) => (prev === menu ? null : menu));
     setActiveSubMenu(null); // Reset submenus when switching main menus
   };
 
+  // Toggle the visibility of a submenu
   const toggleSubMenu = (submenu: string) => {
     setActiveSubMenu((prev) => (prev === submenu ? null : submenu));
   };
 
   return (
     <nav className="employee-navbar">
+      {/* Main navigation items */}
       <ul className="navbar-list">
         <li onClick={() => toggleMainMenu('self')}>Self Related</li>
         <li onClick={() => toggleMainMenu('project')}>Project Related</li>
@@ -24,7 +28,7 @@ const EmployeeNavBar: React.FC = () => {
         <li>Others</li>
       </ul>
 
-      {/* Self Related Submenu */}
+      {/* Self Related submenu */}
       {activeMainMenu === 'self' && (
         <div className="submenu">
           <ul>
@@ -46,7 +50,7 @@ const EmployeeNavBar: React.FC = () => {
             </ul>
           )}
 
-          {/* Nested Submenus for Self Related */}
+          {/* Nested submenus for Self Related */}
           {activeSubMenu === 'attendance' && (
             <ul className="nested-submenu">
               <li>1. Given Month</li>
@@ -85,7 +89,7 @@ const EmployeeNavBar: React.FC = () => {
         </div>
       )}
 
-      {/* Project Related Submenu */}
+      {/* Project Related submenu */}
       {activeMainMenu === 'project' && (
         <div className="submenu">
           <ul>
@@ -108,7 +112,7 @@ const EmployeeNavBar: React.FC = () => {
         </div>
       )}
 
-      {/* Organization Related Submenu */}
+      {/* Organization Related submenu */}
       {activeMainMenu === 'organization' && (
         <div className="submenu">
           <ul>

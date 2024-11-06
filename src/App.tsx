@@ -5,7 +5,7 @@ import EmployeeNavBar from './components/EmployeeNavBar';
 const App: React.FC = () => {
   return (
     <div className="App">
-      <EmployeeNavBar />
+      <EmployeeNavBar /> {/* Render the EmployeeNavBar component */}
     </div>
   );
 };
