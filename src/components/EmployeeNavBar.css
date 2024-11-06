@@ -1,0 +1,62 @@
+/* Basic Navbar Styles */
+.employee-navbar {
+    background-color: rgb(0, 0, 0); /* Black background */
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center align the text in the navbar */
+    position: relative;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center align the list items horizontally */
+    gap: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-list li {
+    cursor: pointer;
+    font-weight: 500;
+    color: white; /* White text color */
+}
+
+/* Submenu Styles */
+.submenu {
+    position: fixed; /* Fix it to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift it to the exact center */
+    background-color: rgba(40, 40, 40, 0.95); /* Dark background with transparency */
+    border-radius: 8px;
+    padding: 20px;
+    color: white; /* Set submenu text color to white */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it appears on top */
+    width: 300px; /* Set a width to make the submenu consistent */
+}
+
+.submenu ul, .nested-submenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nested-submenu {
+    padding-left: 15px;
+    color: white;
+}
+
+.nested-submenu li {
+    padding: 5px 0;
+}
+
+/* Uncomment this for hover effect */
+.navbar-list li:hover,
+.submenu ul li:hover,
+.nested-submenu li:hover {
+    color: purple;
+    /* text-decoration: underline; */
+}
